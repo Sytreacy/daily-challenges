@@ -1,0 +1,84 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.d-flex {
+    display: flex;
+}
+
+h1{
+    margin-bottom: 0.5em;
+}
+.container > div + div, .date-time + p {
+    margin-top: 2em;
+}
+
+div.wrapper {
+    background-image: url('serbia.jpg');
+    max-width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+div.bg-overlay{
+    height: 100vh;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0.4), rgba(0,154,114,0.5)); 
+}
+
+div.container {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding-block: 4em;
+   max-width: 50vw;
+}
+
+div.container > .d-flex {
+    flex-direction: column;
+}
+
+.date-time{
+    flex-wrap: wrap;
+}
+
+.date-time > div {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.date-time div p{
+    margin-bottom: 0.5em;   
+}
+
+.date-time div p:first-child{
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+}
+
+.date-time > div:not(:last-child){
+    padding-right: 2.5%;
+}
+
+p.numbers{
+    background: rgba(255,255,255,0.3);
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+}
+
+.date-time div:nth-child(1) > p{
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.date-time div:nth-child(4) > p{
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
